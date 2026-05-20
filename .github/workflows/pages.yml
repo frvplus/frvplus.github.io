@@ -11,18 +11,24 @@ jobs:
     env:
       JEKYLL_ENV: production
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6.4.0
+      - uses: actions/checkout@v4
+
+      # 1. Upgraded Node.js to a supported version
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
-          cache: npm
+          node-version: '20'
+          cache: 'npm'
+
+      # 2. Upgraded Ruby from 2.7 to 3.3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: '3.3'
           bundler-cache: true
+
       - run: npm install
       - run: npm run prod
       - run: bundle exec jekyll build
+
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
