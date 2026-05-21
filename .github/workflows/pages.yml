@@ -11,7 +11,7 @@ jobs:
     env:
       JEKYLL_ENV: production
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # 1. Upgraded Node.js to a supported version
       - uses: actions/setup-node@v4
