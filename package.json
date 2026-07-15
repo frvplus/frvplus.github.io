@@ -16,7 +16,7 @@
     "devDependencies": {
         "@babel/core": "^8.0.1",
         "@babel/preset-env": "^8.0.2",
-        "@symfony/webpack-encore": "^6.0.0",
+        "@symfony/webpack-encore": "^7.1.0",
         "@tailwindcss/forms": "^0.5.11",
         "@tailwindcss/typography": "^0.5.20",
         "autoprefixer": "^10.5.0",
